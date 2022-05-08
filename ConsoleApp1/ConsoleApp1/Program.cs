@@ -8,6 +8,8 @@ namespace ConsoleApp1
         {
             int[,] array = new int[10, 10];
             int maxValue = int.MinValue;
+            int minNumber = 0;
+            int maxNumber = 11;
             Random random = new Random();
             Console.WriteLine("Исходный массив\n");
 
@@ -16,7 +18,7 @@ namespace ConsoleApp1
 
                 for (int j = 0; j < array.GetLength(1); j++)
                 {
-                    array[i, j] = random.Next(0, 11);
+                    array[i, j] = random.Next(minNumber, maxNumber);
                     Console.Write(array[i, j] + " ");
 
                     if (maxValue < array[i, j])
